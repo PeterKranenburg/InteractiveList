@@ -2,7 +2,12 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #C68BD6;
+}
+
 .gallery {
+    background-color: white;
     border: 1px solid black;
 }
 
@@ -18,6 +23,15 @@
 .desc {
     padding: 15px;
     text-align: center;
+    border: 1px solid black;
+}
+
+.descTitle {
+    color: white;
+    padding: 15px;
+    text-align: center;
+    background-color: #9D19F6;
+    border: 1px solid black;
 }
 
 .toolImg {
@@ -25,14 +39,14 @@
     height: 400px;
 }
 
-.desc {
-    border: 1px solid black;
+.parent {
+    display: flex;
 }
 
 .responsive {
     padding: 0 6px;
     float: left;
-    width: 25%;
+    width: 24.99999%;
 }
 
 @media only screen and (max-width: 700px) {
