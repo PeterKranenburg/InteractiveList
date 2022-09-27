@@ -3,12 +3,13 @@
 }
 
 body {
-    background-color: #C68BD6;
+    background-color: #C68BD6!important;
 }
 
 .gallery {
     background-color: white;
     border: 1px solid black;
+    margin: 2px;
 }
 
 .gallery:hover {
