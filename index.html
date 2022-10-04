@@ -2,141 +2,75 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
     <title>Tool View</title>
+    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
 </head>
 <body>
-<input type="file" id="excel_file" />
-<div id="excel_data" class="mt-5"></div>
-<div class="parent">
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="">
-                <img class="toolImg" src="https://www.ictmagazine.nl/wp-content/uploads/2017/06/Cormel.png" alt="Cinque Terre">
-            </a>
-            <div class="descTitle">E-Health. Beeldbellen en een ECD</div>
-            <div class="desc">We leven tegenwoordig allemaal in een digitale wereld. Dus waarom zouden we de zorg ook niet digitaal maken. <br>
-            Denk hierbij aan bijvoorbeeld beeldbellen met je dokter of je dossier digitaal inzien.</div>
-        </div>
-    </div>
+<script type="text/javascript" src="js/ZorgTools.js"></script>
+<script>
+let divNumber = 0;
 
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="">
-                <img class="toolImg" src="https://www.duurzaammbo.nl/images/foto2/domotica.jpg" alt="Forest">
-            </a>
-            <div class="descTitle"> Domotica </div>
-            <div class="desc"> Smart mobile en IOT. We zien steeds vaker dat we digitale middelen halen in on huis voor hulp. <br>
-            Zouden deze techonologie ook kunnen worden gebruikt op een zorg gebied.</div>
-        </div>
-    </div>
+function createParentDiv(i) {
+    var parentDiv = document.createElement('div')
+    parentDiv.className = "parent"
+    divNumber = i;
+    parentDiv.id = "parent" + divNumber
+    document.body.appendChild(parentDiv)
+}
 
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="">
-                <img class="toolImg" src="https://www.fundis.nl/wp-content/uploads/2019/05/FundiQare_Momo-Medical_Plaat-en-Box.jpg" alt="Northern Lights">
-            </a>
-            <div class="descTitle"> Momobedsense </div>
-            <div class="desc">Een bedsensor die geplaats wordt onder het matras op borst hoogte. <br>
-            Hierdoor krijg je informatie te zien over de persoon die in bed ligt. <br>
-            In de app kan je dan zien of de bepaalde persoon goed of slecht slaapt</div>
-        </div>
-    </div>
+function createGalleryResponiveDiv(i) {
+    var parentDivToAdd = document.getElementById("parent" + divNumber)
 
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="">
-                <img class="toolImg" src="https://www.curamare.nl/images/content/page341/3ded8d9da1curamare-persoonsalarmering.jpg" alt="Mountains">
-            </a>
-            <div class="descTitle"> Een Persoons alarm </div>
-            <div class="desc">Stel je voor je hebt een oma met dementie. Die regelmatig nog wel is wegloopt. <br>
-            Hoe handig zou het zijn als ze een device bij zich die een gps tracker heeft. <br>
-            Kan ook voorkomen dat het als alarm wordt gebruikt wanneer iemand zorg nodig hebt.</div>
-        </div>
-    </div>
-</div>
-<div class="parent">
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="">
-                <img class="toolImg" src="https://www.generatiethuis.nl/wp-content/uploads/2020/12/Slimotheek-Medido_2.jpg" alt="Mountains">
-            </a>
-            <div class="descTitle"> Meddio</div>
-            <div class="desc">Ooit moeite met het nemen van je medicijnen in een dossis. Laat de Meddio je helpen met het dosseren van je medicijnen</div>
-        </div>
-    </div>
+    var responiveDiv = document.createElement('div')
+    responiveDiv.className = "responsive"
+    responiveDiv.id = "responsive"+i
 
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="">
-                <img class="toolImg" src="https://www.dementie-winkel.nl//Files/2/52000/52599/ProductPhotos/448/1678439491.png" alt="Mountains">
-            </a>
-            <div class="descTitle"> Slimme sensoren </div>
-            <div class="desc">Tegenwoordige zijn er sensoren in alleri soorten en maten. Alleen de vraag is natuurlijk hoe helpt dit met de zorg?</div>
-        </div>
-    </div>
+    var galleryDiv = document.createElement('div')
+    galleryDiv.className = "gallery"
+    galleryDiv.id = "gallery" + i
 
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="">
-                <img class="toolImg" src="https://www.dagelijksauto.nl/wp-content/uploads/2021/01/denny-muller-PulU3AxfJtQ-unsplash-1024x6831-1.jpg" alt="Mountains">
-            </a>
-            <div class="descTitle"> Slimme camera`s </div>
-            <div class="desc">Ook in sensoren zijn camera`s tegewoordig best slim. Van 360* tot heel veel foto`s tegelijk. <br>
-            Alleen de vraag is natuurlijk hoe kan dit voor de zorg een benefit zijn.</div>
-        </div>
-    </div>
+    parentDivToAdd.appendChild(responiveDiv)
 
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="">
-                <img class="toolImg" src="https://i.ytimg.com/vi/-p6FTIW2fMk/mqdefault.jpg" alt="Mountains">
-            </a>
-            <div class="descTitle"> Slimme vloeren met val detectie.  </div>
-            <div class="desc">Alles wordt tegenwoordig slim. Vloeren, Keukens, Sensoren en noem maar op. <br>
-            Alleen hoe handig zal het zijn als je bewoners kan inzien in wanneer ze valen. <br>
-            Zodat je gelijk tehulp kan schieten wanneer het nodig is. </div>
-        </div>
-    </div>
-</div>
-<div class="parent">
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="">
-                <img class="toolImg" src="https://images0.persgroep.net/rcs/PTvICBkBzp2saqkQqv5dnEOvl2k/diocontent/157172726/_fitwidth/763?appId=93a17a8fd81db0de025c8abd1cca1279&quality=0.8" alt="Mountains">
-            </a>
-            <div class="descTitle"> Wolk heupairbag valdetectie  </div>
-            <div class="desc">Stel je voor een oud persoon die lastig zelf op kan staan. Een fragile skelet hebt dat breekt als ze hardt valt. <br>
-            Een bepaald soort heup kleiding die een val kan deceteren en dan een airbag in de kleding opblaast. <br>
-            De zorgverlener kan dan een melding krijgen met waar de persoon is gevallen en hoelaat.</div>
-        </div>
-    </div>
+    var responsiveDivDoc = document.getElementById("responsive" + i)
 
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="">
-                <img class="toolImg" src="https://www.zorgvannu.nl/sites/www.zorgvannu.nl/files/styles/toepassing_carrousel/public/beeld/toepassingen/abenanova.png?itok=b_JaHbCP" alt="Mountains">
-            </a>
-            <div class="descTitle"> slim incontinentiemateriaal  </div>
-            <div class="desc">Van het ene slimme aparraat naar het volgende aparaat. Sommige mensen in de wereld kunnen nou eenmaal niet zonder een luier <br>
-            Zou het kunnen dat we een slimme luier hebben die alle soort data naar de app kan sturen <br>
-            Hiermee kan je als verpleegster dan precies alles netjes bijhouden</div>
-        </div>
-    </div>
+    responsiveDivDoc.appendChild(galleryDiv)
+}
 
-    <div class="responsive">
-        <div class="gallery">
-            <a target="_blank" href="">
-                <img class="toolImg" src="https://fscl01.fonpit.de/userfiles/7695213/image/Smart-Glasses-Hero.jpg" alt="Mountains">
-            </a>
-            <div class="descTitle"> Slimme glasses  </div>
-            <div class="desc">Slimme glasses. Zoals eerder aangegeven zijn slimme gagedts niet meer weg te denken <br>
-            Hoe makkelijke zal het leven worden voor slechte ziende of blinde. Als ze hun bril opdoen en alles te horen krijgen <br>
-            Slechte ziende zouden nog betere informatie te zien kunnen krijgen over bijvoorbeelde hoe druk het is op de weg</div>
-        </div>
-    </div>
-</div>
+function createContentDivs(i) {
+    var AimgLink = document.createElement('a')
+    var imgElement = document.createElement('img')
+    AimgLink.href = zorgToolData[i].Toollink
+    imgElement.className = "toolImg"
+    imgElement.alt = "No img found"
+    imgElement.src = zorgToolData[i].Toolimg ?  zorgToolData[i].Toolimg : ""
+
+    var galleryDiv = document.getElementById("gallery" + i)
+    galleryDiv.appendChild(AimgLink)
+    galleryDiv.appendChild(imgElement)
+
+    var descTitleDiv = document.createElement('div')
+    descTitleDiv.className = "descTitle"
+    descTitleDiv.innerHTML = zorgToolData[i].Toolnaam
+    var descDiv = document.createElement('div')
+    descDiv.className = "desc"
+    descDiv.innerHTML = zorgToolData[i].Toolbeschrijving ? zorgToolData[i].Toolbeschrijving : "Geen beschrijving gevonden voor deze tool"
+
+    galleryDiv.appendChild(descTitleDiv)
+    galleryDiv.appendChild(descDiv)
+}
+
+for (let i = 0; i < zorgToolData.length; i++) {
+    if(i % 4 === 0) {
+        createParentDiv(i);
+        createGalleryResponiveDiv(i);
+        createContentDivs(i);
+    }
+    else {
+        createGalleryResponiveDiv(i);
+        createContentDivs(i);
+    }
+}
+
+</script>
 </body>
-<script type="text/javascript" src="js/excelScript.js"></script>
 </html>
