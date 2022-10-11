@@ -3,13 +3,13 @@ var zorgToolData = [
   "Toolnaam": "E-health:Beeldbellen, ECD Electronisch clienten dossier",
   "Toolbeschrijving": "We leven allemaal tegen woordig digitaal dus waarom niet bellen met je dokter. Of inzien hoe het met je gaat. Dat allemaal digitaal bij de hand.",
   "Toolimg": "https:\/\/www.ictmagazine.nl\/wp-content\/uploads\/2017\/06\/Cormel.png",
-  "Toollink": "Null"
+  "Toollink": "https:\/\/Google.nl\/,https:\/\/stackoverflow.com\/questions\/179713\/how-to-change-the-href-attribute-for-a-hyperlink-using-jquery"
  },
  {
   "Toolnaam": "Domotica",
   "Toolbeschrijving": "Hoe werken IOT en Smart mobiles nou samen met de zorg? Vindt het hier uit",
   "Toolimg": "https:\/\/www.duurzaammbo.nl\/images\/foto2\/domotica.jpg",
-  "Toollink": "Null"
+  "Toollink": "https:\/\/www.google.nl\/"
  },
  {
   "Toolnaam": "MomoBedsense",
@@ -24,24 +24,31 @@ var zorgToolData = [
   "Toollink": "Null"
  },
  {
-  "Toolnaam": "Medido"
+  "Toolnaam": "Medido",
+  "Toollink": "Null"
  },
  {
-  "Toolnaam": "Slimme sensoren"
+  "Toolnaam": "Slimme sensoren",
+  "Toollink": "Null"
  },
  {
-  "Toolnaam": "slimme camera's"
+  "Toolnaam": "slimme camera's",
+  "Toollink": "Null"
  },
  {
-  "Toolnaam": "Smart floor, valdetectie"
+  "Toolnaam": "Smart floor, valdetectie",
+  "Toollink": "Null"
  },
  {
-  "Toolnaam": "Wolk heupairbag valdetectie"
+  "Toolnaam": "Wolk heupairbag valdetectie",
+  "Toollink": "Null"
  },
  {
-  "Toolnaam": "slim incontinetiemateriaal"
+  "Toolnaam": "slim incontinetiemateriaal",
+  "Toollink": "Null"
  },
  {
-  "Toolnaam": "smart glasses"
+  "Toolnaam": "smart glasses",
+  "Toollink": "Null"
  }
 ]
