@@ -49,10 +49,12 @@ function CreateModalData(responiveDiv, i) {
         } else {
             if (toolLinks.includes(',')) {
                 let toolLinkSpiltted = toolLinks.split(',')
-                for (let i = 0; i < toolLinks.length; i++) {
+                for (let i = 0; i < toolLinkSpiltted.length; i++) {
                     let forLoopLink = document.createElement("a")
                     forLoopLink.innerHTML = toolLinkSpiltted[i]
                     forLoopLink.href = toolLinkSpiltted[i]
+
+                    console.log(toolLinkSpiltted[i])
 
                     $("#toolsModal").find('.modal-body').append(forLoopLink)
                     $("#toolsModal").find('.modal-body').append('<br>')
