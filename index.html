@@ -38,10 +38,14 @@ function CreateModalData(responiveDiv, i) {
         let toolName = $(this).data("name")
         let newLink = document.createElement("a")
 
+        $("#toolsModal").find('.modal-body').children().remove()
         $(".modal-title").text("Links for: " + toolName)
         if (toolLinks === "Null" || toolLinks === undefined) {
             newLink.innerHTML = "No links found for " + toolName + " Clicking me wont do anything"
             newLink.href = "#"
+
+            $("#toolsModal").find('.modal-body').append(newLink)
+            $("#toolsModal").find('.modal-body').append('<br>')
         } else {
             if (toolLinks.includes(',')) {
                 let toolLinkSpiltted = toolLinks.split(',')
@@ -56,11 +60,11 @@ function CreateModalData(responiveDiv, i) {
             } else {
                 newLink.innerHTML = toolName + " Only found link"
                 newLink.href = zorgToolData[i].Toollink
+
+                $("#toolsModal").find('.modal-body').append(newLink)
+                $("#toolsModal").find('.modal-body').append('<br>')
             }
         }
-
-        $("#toolsModal").find('.modal-body').append(newLink)
-        $("#toolsModal").find('.modal-body').append('<br>')
     })
 }
 
@@ -70,10 +74,6 @@ function createGalleryResponiveDiv(i) {
     var responiveDiv = document.createElement('div')
     responiveDiv.className = "responsive"
     responiveDiv.id = "responsive"+i
-
-    $("#toolsModal").on("hide.bs.modal", function(){
-        $(this).find('.modal-body').empty()
-    });
 
     if(zorgToolData[i].Toollink) {
         CreateModalData(responiveDiv, i);
