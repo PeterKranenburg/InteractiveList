@@ -3,52 +3,56 @@ var zorgToolData = [
   "Toolnaam": "E-health:Beeldbellen, ECD Electronisch clienten dossier",
   "Toolbeschrijving": "We leven allemaal tegen woordig digitaal dus waarom niet bellen met je dokter. Of inzien hoe het met je gaat. Dat allemaal digitaal bij de hand.",
   "Toolimg": "https:\/\/www.ictmagazine.nl\/wp-content\/uploads\/2017\/06\/Cormel.png",
-  "Toollink": "https:\/\/Google.nl\/,https:\/\/stackoverflow.com\/questions\/179713\/how-to-change-the-href-attribute-for-a-hyperlink-using-jquery"
+  "Toollink": "Null"
  },
  {
   "Toolnaam": "Domotica",
-  "Toolbeschrijving": "Hoe werken IOT en Smart mobiles nou samen met de zorg? Vindt het hier uit",
-  "Toolimg": "https:\/\/www.duurzaammbo.nl\/images\/foto2\/domotica.jpg",
-  "Toollink": "https:\/\/www.google.nl\/"
+  "Toolbeschrijving": "Waarbij het bij ‘gewone’ domotica draait om het automatiseren van apparatuur thuis of in een ander gebouw, spreekt men van een specifieke zorgdomotica wanneer de geautomatiseerde toepassingen worden gebruik om het leven van hulpbehoevenden of ouderen gemakkelijker te maken. Hierbij moet je ook weer denken aan geautomatiseerde toepassingen binnen een huiselijke omgeving. Dit kan binnen een aangepast woonhuis als binnen een woon-zorginstelling.",
+  "Toollink": "Zorgdomotica | Wat is het? | Verduurzaming Nederland"
  },
  {
   "Toolnaam": "MomoBedsense",
-  "Toolbeschrijving": "Bedsensoren. Tenslotte willen we niet dat onze patienten een onrustigge nacht hebben. Hoe houden we dat in de gaten?",
-  "Toolimg": "https:\/\/www.fundis.nl\/wp-content\/uploads\/2019\/05\/FundiQare_Momo-Medical_Plaat-en-Box.jpg",
-  "Toollink": "Null"
+  "Toolbeschrijving": "De Momo BedSense is een sensorplaat die op borsthoogte onder het matras van de bewoner wordt geplaatst. De sensoren geven informatie over druk, houding en trillingen. Deze data wordt weergegeven in een app die inzicht geeft in welke bewoners veilig en rustig in bed liggen, wie onrustig is en wie dringend hulp nodig heeft om bijvoorbeeld valincidenten of decubitus te voorkomen. Zorgmedewerkers kunnen zo goed inschatten welke acties nodig zijn. De beschikbare informatie in de app kan tevens door behandelaren worden geanalyseerd voor gerichte advisering over interventies, bijvoorbeeld om het slaappatroon te bevorderen",
+  "Toollink": "Momo Medical | Home"
  },
  {
   "Toolnaam": "Persoonsalarmering",
-  "Toolbeschrijving": "Persoon kwijt of iemand met dementie. Maak gebruik van de Persoon alarm. Vaak gepaard met gps.",
-  "Toolimg": "https:\/\/www.curamare.nl\/images\/content\/page341\/3ded8d9da1curamare-persoonsalarmering.jpg",
-  "Toollink": "Null"
+  "Toolbeschrijving": "Wat is personenalarmering? Personenalarmering is een veiligheidssysteem. Het bestaat uit een draadloze zender en een alarmapparaat. De zender draagt u om uw hals of pols. Zo heeft u deze altijd bij de hand. De zender heeft een bereik van ongeveer 30 meter. Hij hoeft niet te worden opgeladen.",
+  "Toollink": "Wat is personenalarmering? | Onbezorgdthuiswonen.nl - Altijd hulp binnen handbereik"
  },
  {
   "Toolnaam": "Medido",
-  "Toollink": "Null"
+  "Toolbeschrijving": "Versterk de zelfredzaamheid van cliënten met Medido. De automatische medicijndispenser biedt op het juiste tijdstip de juiste medicatie aan. Zo is de cliënt niet langer afhankelijk van de thuiszorg voor het aanreiken van de medicatie.",
+  "Toollink": "Automatische medicijndispenser Medido"
  },
  {
   "Toolnaam": "Slimme sensoren",
-  "Toollink": "Null"
+  "Toolbeschrijving": "Er zijn verschillende soorten sensoren die monitoren waar iemand heen gaat, naar welke kamer en hoe lang diegene daar is. Deze vorm van personenalarmering, ofwel domotica, ‘weet’ wanneer iemand plotseling niet meer beweegt, valt of is vergeten te eten. De zorgverleners krijgen dan een noodmelding. De sensoren kunnen op verschillende plaatsen in de woning of zorginstelling worden geïnstalleerd. ",
+  "Toollink": "Slimme domotica - YouTube"
  },
  {
   "Toolnaam": "slimme camera's",
-  "Toollink": "Null"
+  "Toolbeschrijving": "Valpartijen die niet op tijd ontdekt worden zijn een groot gezondheidsrisico voor ouderen. Met de huidige domotica of slimme sensoren, is in 6 van de 7 valpartijen iemand na 5 minuten pas aanwezig om de cliënt te helpen. Daarnaast wordt het zorgpersoneel overspoeld met valse alarmen.",
+  "Toollink": "Ontdek de Kepler Night Nurse | Kepler Vision Technologies"
  },
  {
   "Toolnaam": "Smart floor, valdetectie",
-  "Toollink": "Null"
+  "Toolbeschrijving": "Door bewegingsgedrag van ouderen automatisch (zonder aanwezigheid van personeel) periodiek te meten met een loopsensor in samenwerking met een slimme vloer (vijf tot tien meter), wordt direct duidelijk hoe hoog het valrisico is. De valrisico thermometer in de Smart Floor App (groen is veilig, bij oranje is het oppassen, bij rood rinkelen de alarmbellen) geeft aan of extra fysiotherapie kan helpen om beter en stabieler te bewegen of dat er een loophulpmiddel moet worden ingezet. Het kan ook zijn dat het valrisico  zo groot is dat een heupairbag (in combinatie met een loophulpmiddel) de aangewezen interventie is.",
+  "Toollink": "Smart Floor – Anders werken in de zorg"
  },
  {
   "Toolnaam": "Wolk heupairbag valdetectie",
-  "Toollink": "Null"
+  "Toolbeschrijving": "De Wolk heupairbag voorkomt heupfracturen bij een val. Wolk is een compacte, herbruikbare heupairbag die ouderen gemakkelijk kunnen dragen. Sensoren in de Wolk detecteren een val, de airbag blaast zichzelf razendsnel op en de heupen zijn beschermd.",
+  "Toollink": "Wolk – Anders werken in de zorg"
  },
  {
   "Toolnaam": "slim incontinetiemateriaal",
-  "Toollink": "Null"
+  "Toolbeschrijving": "De baanbrekende en betrouwbare zorgsoftware van Kepler Night Nurse elimineert 99% van de valse alarmen en heeft nog vele andere voordelen.",
+  "Toollink": "Slim incontinentiemateriaal – Anders werken in de zorg"
  },
  {
   "Toolnaam": "smart glasses",
-  "Toollink": "Null"
+  "Toolbeschrijving": "Met de Smart Glass kan de zorgmedewerker door middel van een camera direct contact leggen met een verpleegkundige of arts. De verpleegkundige of arts kan meteen door de ogen van de medewerker meekijken en ondersteuning bieden. Deskundigheid zónder afstand. De voordelen voor de cliënt: specialistische zorg is snel en dichtbij geregeld. Afstand en reistijd is geen bezwaar. De cliënt is omringd door vertrouwde gezichten en de cliënt kan meepraten en vragen stellen aan de deskundige. ",
+  "Toollink": "1 Minuut – Innovatie samen met de zorg!"
  }
 ]
