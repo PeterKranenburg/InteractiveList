@@ -14,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
+<h1 id="introTitle">Welcome to the Zorgtools library</h1>
 <script type="text/javascript" src="js/ZorgTools.js"></script>
 <script>
 let divNumber = 0;
@@ -57,9 +58,8 @@ function CreateModalData(responiveDiv, i) {
                     $("#toolsModal").find('.modal-body').append('<br>')
                 }
             } else {
-                var toolNumber = i;
-                newLink.innerHTML = toolName + " Only found link"
-                newLink.href = zorgToolData[toolNumber].Toollink
+                newLink.innerHTML = toolLinks
+                newLink.href = zorgToolData[i].Toollink
 
                 $("#toolsModal").find('.modal-body').append(newLink)
                 $("#toolsModal").find('.modal-body').append('<br>')

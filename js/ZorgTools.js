@@ -15,6 +15,7 @@ var zorgToolData = [
   "Toolnaam": "MomoBedsense",
   "Toolbeschrijving": "Bedsensoren. Tenslotte willen we niet dat onze patienten een onrustigge nacht hebben. Hoe houden we dat in de gaten?",
   "Toolimg": "https:\/\/www.fundis.nl\/wp-content\/uploads\/2019\/05\/FundiQare_Momo-Medical_Plaat-en-Box.jpg",
+  "Toollink": "Null"
  },
  {
   "Toolnaam": "Persoonsalarmering",
