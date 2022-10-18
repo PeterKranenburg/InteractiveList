@@ -41,11 +41,10 @@ function CreateModalData(responiveDiv, i) {
 
         $(".modal-title").text("Links for: " + toolName)
         if (toolLinks === "Null" || toolLinks === undefined) {
-            newLink.innerHTML = "No links found for " + toolName + " Clicking me wont do anything"
-            newLink.href = "#"
+            let pEle = document.createElement("p")
+            pEle.innerHTML = toolName + " has no found links"
 
-            $("#toolsModal").find('.modal-body').append(newLink)
-            $("#toolsModal").find('.modal-body').append('<br>')
+            $("#toolsModal").find('.modal-body').append(pEle)
         } else {
             if (toolLinks.includes(',')) {
                 let toolLinkSpiltted = toolLinks.split(',')
