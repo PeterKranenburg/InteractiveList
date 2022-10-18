@@ -17,7 +17,7 @@ Ook verwacht het programma dat er het volgende staat
 Toolnaam -> Heeft altijd een naam  
 ToolLink -> Heeft altijd een link. In geval van niet vul dan Null in de coloum.  
 
-### Stap 1.2 Links 
+#### Stap 1.2 Links 
 In het geval dat je meedere links toevoegt. Scheidt de links met het volgende teken:  
 `,`  om een voorbeeld te geven krijg je dan:  
 `https://www.google.nl/, https://stackoverflow.com/questions/179713/how-to-change-the-href-attribute-for-a-hyperlink-using-jquery`
