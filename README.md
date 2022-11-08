@@ -20,7 +20,14 @@ ToolLink -> Heeft een link of is empty of is gevuld met Null
 #### Stap 1.2 Multiple Links 
 In het geval dat je meedere links toevoegt. Scheidt de links met het volgende teken:  
 `,`  om een voorbeeld te geven krijg je dan:  
-`https://www.google.nl/, https://stackoverflow.com/questions/179713/how-to-change-the-href-attribute-for-a-hyperlink-using-jquery`
+`https://www.google.nl/, https://stackoverflow.com/questions/179713/how-to-change-the-href-attribute-for-a-hyperlink-using-jquery`  
+
+### Stap 1.3 Check your Excel hyperlinks  
+In sommige gevallen kan het volgende voor komen. 
+Je link kan worden geplaats als een verschillende hyperlink.  
+Dit levert issues ops voor de applicatie.  
+Om een voorbeeld te geven krijg je dan Google in plaats van het google adress.  
+Dit kan je fixen door: right click the hyperlink -> Edit Hyper link -> Remove the display/shown text in the top box -> Press ok
 
 ### Step 2 Updaten
 Ga naar de aangeven url in onder de update sectie.  
