@@ -4,7 +4,7 @@
 
 html {
     min-height: 100vh;
-    display: inline-flex;
+    display: grid;
 }
 
 body {
