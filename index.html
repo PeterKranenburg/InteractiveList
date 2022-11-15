@@ -16,7 +16,8 @@
 <body>
 <div class="stickyHeader" id="Header">
     <h1 class="headerH1Txt">Welcome to the Zorgtools library</h1>
-    <p class="headerTxt"> Scroll or Swipe to see more tools </p>
+    <p class="headerTxt"> Scroll or Swipe to see more tools. <br>
+        Click or tap on one to get started </p>
 </div>
 <script type="text/javascript" src="js/ZorgTools.js"></script>
 <script type="text/javascript" src="js/StickyMenu.js"></script>
@@ -129,6 +130,12 @@ for (let i = 0; i < zorgToolData.length; i++) {
     }
 }
 
+$(document).ready(function(){
+    $("#toolsModal").on('shown.bs.modal', function(){
+        $(this).find('#modalBody').focus();
+    });
+});
+
 </script>
 <!-- Link Modal -->
 <div class="modal fade" id="toolsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -140,7 +147,7 @@ for (let i = 0; i < zorgToolData.length; i++) {
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div id="modalBody" class="modal-body">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
