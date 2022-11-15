@@ -4,7 +4,6 @@
 
 html {
     min-height: 100vh;
-    display: grid;
 }
 
 body {
@@ -86,20 +85,40 @@ body {
     width: 24.99999%;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 620px) {
+    html {
+        display: grid;
+    }
+
     .parent{
-        width: 50%;
+        width: 100%;
+        margin: 6px 0;
+    }
+
+    .modal {
+        width: 48%;
+        height: auto;
+    }
+
+    body  {
+        width: 100%;
         margin: 6px 0;
     }
 
     .responsive {
-        width: 50%;
+        width: 100%;
         margin: 6px 0;
+        font-weight: bold;
     }
 }
 
+/*
 @media only screen and (max-width: 500px) {
     .parent {
+        width: 100%;
+    }
+
+    body {
         width: 100%;
     }
 
@@ -108,6 +127,7 @@ body {
         font-weight: bold;
     }
 }
+*/
 
 .clearfix:after {
     content: "";
