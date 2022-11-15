@@ -18,7 +18,7 @@ var zorgToolData = [
  {
   "Toolnaam": "Persoonsalarmering",
   "Toolbeschrijving": "Wat is personenalarmering? Personenalarmering is een&nbsp;veiligheidssysteem. Het bestaat uit een draadloze zender en een alarmapparaat. De zender draagt u om uw hals of pols. Zo heeft u deze altijd bij de hand. De zender heeft een bereik van ongeveer 30 meter. Hij hoeft niet te worden opgeladen.",
-  "Toollink": "http:\/\/www.onbezorgdthuiswonen.nl\/wat-is-personenalarmering - :~:text=Wat%20is%20personenalarmering%3F%20Personenalarmering%20is%20een%20veiligheidssysteem.%20Het,30%20meter.%20Hij%20hoeft%20niet%20te%20worden%20opgeladen."
+  "Toollink": "http:\/\/www.onbezorgdthuiswonen.nl\/wat-is-personenalarmering"
  },
  {
   "Toolnaam": "Medido",
