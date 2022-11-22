@@ -3,7 +3,7 @@ body {
     margin: auto;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     overflow: auto;
-    background: linear-gradient(315deg, rgb(7, 77, 217) 3%, rgb(26, 109, 217) 38%, rgb(78, 152, 217) 68%, rgb(137, 194, 217) 98%);
+    background: linear-gradient(315deg, rgb(105, 175, 203) 3%, rgb(26, 109, 217) 38%, rgb(78, 152, 217) 68%, rgb(137, 194, 217) 98%);
     animation: gradient 15s ease infinite;
     background-size: 400% 400%;
     background-attachment: fixed;
