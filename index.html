@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/waves.css">
 
     <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -14,19 +15,37 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="stickyHeader" id="Header">
+<div class="sticky-top stickyHeader" id="Header">
     <h1 class="headerH1Txt">Welcome to the Zorgtools library</h1>
-    <p class="headerTxt"> Scroll or Swipe to see more tools. <br>
-        Click or tap on one to get started </p>
+    <p class="headerTxt"> Scroll or Swipe to see more tools. Click or tap on the text of one to get started. </p>
 </div>
+<div class="wave"></div>
+<div class="wave"></div>
+<div class="wave"></div>
 <script type="text/javascript" src="js/ZorgTools.js"></script>
 <script type="text/javascript" src="js/StickyMenu.js"></script>
 <script>
 let divNumber = 0;
+/*
+    Parent and Container  div
+     row div
+        gallery col div
+           content
+     row div
+        gallery col div
+           content
+      row div
+        gallery col div
+           content
+      row div
+        gallery col div
+           content
+     Parent and Container div
 
+ */
 function createParentDiv(i) {
     var parentDiv = document.createElement('div')
-    parentDiv.className = "parent"
+    parentDiv.className = "parent container"
     divNumber = i;
     parentDiv.id = "parent" + divNumber
     document.body.appendChild(parentDiv)
@@ -39,7 +58,7 @@ function CreateModalData(responiveDiv, i) {
     $(responiveDiv).attr("data-name", zorgToolData[i].Toolnaam)
 
 
-    $(document).on("click", "#responsive" + i, function () {
+    $(document).on("click", "#descDiv" + i, function () {
         $("#toolsModal").find('.modal-body').children().remove()
         let toolLinks = $(this).data("links")
         let toolName = $(this).data("name")
@@ -77,15 +96,11 @@ function createGalleryResponiveDiv(i) {
     var parentDivToAdd = document.getElementById("parent" + divNumber)
 
     var responiveDiv = document.createElement('div')
-    responiveDiv.className = "responsive"
+    responiveDiv.className = "row"
     responiveDiv.id = "responsive"+i
 
-    if(zorgToolData[i].Toollink) {
-        CreateModalData(responiveDiv, i);
-    }
-
     var galleryDiv = document.createElement('div')
-    galleryDiv.className = "gallery"
+    galleryDiv.className = "gallery col"
     galleryDiv.id = "gallery" + i
 
     parentDivToAdd.appendChild(responiveDiv)
@@ -111,8 +126,13 @@ function createContentDivs(i) {
     descTitleDiv.className = "descTitle"
     descTitleDiv.innerHTML = zorgToolData[i].Toolnaam
     var descDiv = document.createElement('div')
-    descDiv.className = "desc"
+    descDiv.className = "desc glass"
+    descDiv.id = "descDiv"+i
     descDiv.innerHTML = zorgToolData[i].Toolbeschrijving ? zorgToolData[i].Toolbeschrijving : "Geen beschrijving gevonden voor deze tool"
+
+    if(zorgToolData[i].Toollink) {
+        CreateModalData(descDiv, i);
+    }
 
     galleryDiv.appendChild(descTitleDiv)
     galleryDiv.appendChild(descDiv)
@@ -136,6 +156,30 @@ $(document).ready(function(){
     });
 });
 
+
+let glassDiv = document.getElementsByClassName("glass");
+let background;
+
+function getBackground() {
+    backGround = $("body").css("background-color");
+}
+function checkBackgroundColor() {
+    if (backGround === "rgb(7, 77, 217)" || backGround === "rgb(26, 109, 217)") {
+        console.log("found bg color: " + backGround + " at deep blue")
+        for (let i = 0; i < glassDiv.length; i++) {
+            glassDiv[i].style.color = "black"
+        }
+    } else {
+        console.log("found bg color: " + backGround + " at non blue")
+        for (let i = 0; i < glassDiv.length; i++) {
+            glassDiv[i].style.color = "white"
+        }
+    }
+}
+
+// Current issue is that the background is not checked as of the gradient.
+//setInterval(getBackground, 180)
+//setInterval(checkBackgroundColor, 180)
 </script>
 <!-- Link Modal -->
 <div class="modal fade" id="toolsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
