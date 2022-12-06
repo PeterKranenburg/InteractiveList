@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/waves.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
 
     <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -110,6 +112,30 @@ function createGalleryResponiveDiv(i) {
     responsiveDivDoc.appendChild(galleryDiv)
 }
 
+function moveInfoDivAround(descDiv, i, ev) {
+    ev.preventDefault();
+    let toolTipDiv = document.getElementById("toolTip" + i)
+
+    descDiv.style.zIndex = 0;
+    toolTipDiv.style.zIndex = 9;
+    toolTipDiv.style.left = ev.clientX / 24  + "px";
+    toolTipDiv.style.top = "-" + ev.clientY / 2 + "px";
+}
+
+function resetDivPos(descDiv, i, ev) {
+    ev.preventDefault();
+    let toolTipDiv = document.getElementById("toolTip" + i)
+
+    let ogPosX = toolTipDiv.style.left + "px";
+    let ogPosY = toolTipDiv.style.top + "px";
+
+    descDiv.style.zIndex = 1;
+    toolTipDiv.style.zIndex = 0;
+    toolTipDiv.style.left = ogPosX;
+    toolTipDiv.style.top = ogPosY;
+
+}
+
 function createContentDivs(i) {
     var AimgLink = document.createElement('a')
     var imgElement = document.createElement('img')
@@ -134,8 +160,30 @@ function createContentDivs(i) {
         CreateModalData(descDiv, i);
     }
 
+    var toolTipDiv = document.createElement('div')
+    toolTipDiv.className = "tooltip-content alert alert-primary d-flex p-4 rounded-3"
+    toolTipDiv.role ="alert"
+    toolTipDiv.id = "toolTip" + i
+    //Todo fix google icon and make it work
+    var icon = document.createElement("span")
+    icon.className = "material-symbols-outlined"
+    var textDiv = document.createElement("div")
+    textDiv.className = "mb-0"
+    textDiv.innerHTML = "Want more info :) Click the text"
+
     galleryDiv.appendChild(descTitleDiv)
     galleryDiv.appendChild(descDiv)
+    galleryDiv.appendChild(toolTipDiv)
+
+    // Todo add that the div shows on user mouse location
+    //https://stackoverflow.com/questions/15158180/show-div-at-mouse-cursor-on-hover-of-span
+    //https://www.google.com/search?q=css+get+mouse+position&rlz=1C1VDKB_nlNL953NL953&oq=css+get+mou&aqs=chrome.1.69i57j0i512j0i22i30.3235j0j4&sourceid=chrome&ie=UTF-8
+    toolTipDiv.appendChild(icon)
+    toolTipDiv.appendChild(textDiv)
+
+    //Functions for moving the div
+    descDiv.addEventListener("mouseover", (event) => moveInfoDivAround(descDiv, i, event));
+    descDiv.addEventListener("mouseleave", (event) => resetDivPos(descDiv, i, event));
 }
 
 for (let i = 0; i < zorgToolData.length; i++) {

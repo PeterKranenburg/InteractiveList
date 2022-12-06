@@ -11,11 +11,11 @@ body {
 }
 
 .row {
-    margin: 0px!important;
+    margin: 0 !important;
 }
 
 .col {
-    padding: 0px!important;
+    padding: 0 !important;
 }
 
 .headerH1Txt, .headerTxt {
@@ -49,9 +49,11 @@ body {
     font-size: 1em;
 }
 
+/*
 .glass:hover {
     border: 3px solid red;
 }
+*/
 
 .gallery img {
     width: 100%;
@@ -92,6 +94,19 @@ body {
     border:1px solid rgb(0, 30, 70);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     /*color: black;*/
+}
+
+.tooltip-content {
+    display: none!important;
+}
+
+.glass:hover {
+    border: 3px solid red;
+}
+
+.glass:hover + .tooltip-content {
+    display: block!important;
+    border-radius: 20px;
 }
 
 @media only screen and (max-width: 620px) {
