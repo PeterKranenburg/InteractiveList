@@ -129,7 +129,7 @@ function resetDivPos(descDiv, i, ev) {
 
     let ogPosX = Math.random() + "px"
     let ogPosY = Math.random() + "px"
-    
+
     descDiv.style.zIndex = 1;
     toolTipDiv.style.zIndex = 0;
     toolTipDiv.style.left = ogPosX;
@@ -181,8 +181,8 @@ function createContentDivs(i) {
     toolTipDiv.appendChild(textDiv)
 
     //Functions for moving the div
-    //TODO: Find a way to prevent the infinte loop on mousemove -> onhover. It keeps firing if mouse and the div are on the same position
-    descDiv.addEventListener("mousemove", (event) => setTimeout(moveInfoDivAround(descDiv, i, event), 10000));
+    //TODO: Check on a way to fix the hover issues it more stable then before but still some glitch issues
+    descDiv.addEventListener("mousemove", (event) => setTimeout(moveInfoDivAround(descDiv, i, event), 5));
     descDiv.addEventListener("mouseleave", (event) => setTimeout(resetDivPos(descDiv, i, event), 10));
 }
 
@@ -204,30 +204,6 @@ $(document).ready(function(){
     });
 });
 
-
-let glassDiv = document.getElementsByClassName("glass");
-let background;
-
-function getBackground() {
-    backGround = $("body").css("background-color");
-}
-function checkBackgroundColor() {
-    if (backGround === "rgb(7, 77, 217)" || backGround === "rgb(26, 109, 217)") {
-        console.log("found bg color: " + backGround + " at deep blue")
-        for (let i = 0; i < glassDiv.length; i++) {
-            glassDiv[i].style.color = "black"
-        }
-    } else {
-        console.log("found bg color: " + backGround + " at non blue")
-        for (let i = 0; i < glassDiv.length; i++) {
-            glassDiv[i].style.color = "white"
-        }
-    }
-}
-
-// Current issue is that the background is not checked as of the gradient.
-//setInterval(getBackground, 180)
-//setInterval(checkBackgroundColor, 180)
 </script>
 <!-- Link Modal -->
 <div class="modal fade" id="toolsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
