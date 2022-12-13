@@ -64,8 +64,5 @@ var zorgToolData = [
   "Toolbeschrijving": "Met de Smart Glass kan de zorgmedewerker door middel van een camera direct contact leggen met een verpleegkundige of arts. De verpleegkundige of arts kan meteen door de ogen van de medewerker meekijken en ondersteuning bieden. Deskundigheid zónder afstand. De voordelen voor de cliënt: specialistische zorg is snel en dichtbij geregeld. Afstand en reistijd is geen bezwaar. De cliënt is omringd door vertrouwde gezichten en de cliënt kan meepraten en vragen stellen aan de deskundige.&nbsp;",
   "Toolimg": "Mandy-Broeren-ZGEM-e1620743016262-768x279.png (768×279) (1minuut.com)",
   "Toollink": "https:\/\/1minuut.com\/"
- },
- {
-  "Toollink": "https:\/\/www.youtube.com\/watch?v=XLP4YTpUpBI"
  }
 ]

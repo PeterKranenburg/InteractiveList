@@ -114,24 +114,26 @@ function moveInfoDivAround(descDiv, i, ev) {
     ev.preventDefault();
     let toolTipDiv = document.getElementById("toolTip" + i)
 
+    let x = ev.clientX / 24  + "px";
+    let y = "-" + ev.clientY / 2 + "px";
+
     descDiv.style.zIndex = 0;
     toolTipDiv.style.zIndex = 9;
-    toolTipDiv.style.left = ev.clientX / 24  + "px";
-    toolTipDiv.style.top = "-" + ev.clientY / 2 + "px";
+    toolTipDiv.style.left = x
+    toolTipDiv.style.top =  y
 }
 
 function resetDivPos(descDiv, i, ev) {
     ev.preventDefault();
     let toolTipDiv = document.getElementById("toolTip" + i)
 
-    let ogPosX = toolTipDiv.style.left + "px";
-    let ogPosY = toolTipDiv.style.top + "px";
-
+    let ogPosX = Math.random() + "px"
+    let ogPosY = Math.random() + "px"
+    
     descDiv.style.zIndex = 1;
     toolTipDiv.style.zIndex = 0;
     toolTipDiv.style.left = ogPosX;
     toolTipDiv.style.top = ogPosY;
-
 }
 
 function createContentDivs(i) {
@@ -162,7 +164,6 @@ function createContentDivs(i) {
     toolTipDiv.className = "tooltip-content alert alert-primary d-flex p-4 rounded-3"
     toolTipDiv.role ="alert"
     toolTipDiv.id = "toolTip" + i
-    //Todo fix google icon and make it work
     var icon = document.createElement("span")
     icon.className = "material-symbols-outlined";
     icon.innerHTML = "info"
@@ -181,8 +182,8 @@ function createContentDivs(i) {
 
     //Functions for moving the div
     //TODO: Find a way to prevent the infinte loop on mousemove -> onhover. It keeps firing if mouse and the div are on the same position
-    descDiv.addEventListener("mousemove", (event) => moveInfoDivAround(descDiv, i, event));
-    descDiv.addEventListener("mouseleave", (event) => resetDivPos(descDiv, i, event));
+    descDiv.addEventListener("mousemove", (event) => setTimeout(moveInfoDivAround(descDiv, i, event), 10000));
+    descDiv.addEventListener("mouseleave", (event) => setTimeout(resetDivPos(descDiv, i, event), 10));
 }
 
 for (let i = 0; i < zorgToolData.length; i++) {
