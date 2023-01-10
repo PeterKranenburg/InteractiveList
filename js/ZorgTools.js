@@ -1,6 +1,6 @@
 var zorgToolData = [
  {
-  "Toolnaam": "E-health:Beeldbellen, ECD Electronisch clienten dossier",
+  "Toolnaam": "E-health:1 Beeldbellen, ECD Electronisch clienten dossier",
   "Toolbeschrijving": "We leven allemaal tegen woordig digitaal dus waarom niet bellen met je dokter. Of inzien hoe het met je gaat. Dat allemaal digitaal bij de hand.",
   "Toolimg": "https:\/\/www.ictmagazine.nl\/wp-content\/uploads\/2017\/06\/Cormel.png",
   "Toollink": "Null"
