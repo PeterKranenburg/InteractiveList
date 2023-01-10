@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/waves.css">
+    <link rel="stylesheet" type="text/css" href="css/waves.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -110,6 +110,32 @@ function createGalleryResponiveDiv(i) {
     responsiveDivDoc.appendChild(galleryDiv)
 }
 
+function moveInfoDivAround(descDiv, i, ev) {
+    ev.preventDefault();
+    let toolTipDiv = document.getElementById("toolTip" + i)
+
+    let x = ev.clientX / 24  + "px";
+    let y = "-" + ev.clientY / 2 + "px";
+
+    descDiv.style.zIndex = 0;
+    toolTipDiv.style.zIndex = 9;
+    toolTipDiv.style.left = x
+    toolTipDiv.style.top =  y
+}
+
+function resetDivPos(descDiv, i, ev) {
+    ev.preventDefault();
+    let toolTipDiv = document.getElementById("toolTip" + i)
+
+    let ogPosX = Math.random() + "px"
+    let ogPosY = Math.random() + "px"
+
+    descDiv.style.zIndex = 1;
+    toolTipDiv.style.zIndex = 0;
+    toolTipDiv.style.left = ogPosX;
+    toolTipDiv.style.top = ogPosY;
+}
+
 function createContentDivs(i) {
     var AimgLink = document.createElement('a')
     var imgElement = document.createElement('img')
@@ -134,8 +160,30 @@ function createContentDivs(i) {
         CreateModalData(descDiv, i);
     }
 
+    var toolTipDiv = document.createElement('div')
+    toolTipDiv.className = "tooltip-content alert alert-primary d-flex p-4 rounded-3"
+    toolTipDiv.role ="alert"
+    toolTipDiv.id = "toolTip" + i
+    var icon = document.createElement("span")
+    icon.className = "material-symbols-outlined";
+    icon.innerHTML = "info"
+    icon.style.float = "left"
+    var textDiv = document.createElement("div")
+    textDiv.className = "mb-0"
+    textDiv.innerHTML = "You can click the text if you want &#128513;"
+    textDiv.style.marginLeft = "2px"
+
     galleryDiv.appendChild(descTitleDiv)
     galleryDiv.appendChild(descDiv)
+    galleryDiv.appendChild(toolTipDiv)
+
+    toolTipDiv.appendChild(icon)
+    toolTipDiv.appendChild(textDiv)
+
+    //Functions for moving the div
+    //TODO: Check on a way to fix the hover issues it more stable then before but still some glitch issues
+    descDiv.addEventListener("mousemove", (event) => setTimeout(moveInfoDivAround(descDiv, i, event), 5));
+    descDiv.addEventListener("mouseleave", (event) => setTimeout(resetDivPos(descDiv, i, event), 10));
 }
 
 for (let i = 0; i < zorgToolData.length; i++) {
@@ -156,30 +204,6 @@ $(document).ready(function(){
     });
 });
 
-
-let glassDiv = document.getElementsByClassName("glass");
-let background;
-
-function getBackground() {
-    backGround = $("body").css("background-color");
-}
-function checkBackgroundColor() {
-    if (backGround === "rgb(7, 77, 217)" || backGround === "rgb(26, 109, 217)") {
-        console.log("found bg color: " + backGround + " at deep blue")
-        for (let i = 0; i < glassDiv.length; i++) {
-            glassDiv[i].style.color = "black"
-        }
-    } else {
-        console.log("found bg color: " + backGround + " at non blue")
-        for (let i = 0; i < glassDiv.length; i++) {
-            glassDiv[i].style.color = "white"
-        }
-    }
-}
-
-// Current issue is that the background is not checked as of the gradient.
-//setInterval(getBackground, 180)
-//setInterval(checkBackgroundColor, 180)
 </script>
 <!-- Link Modal -->
 <div class="modal fade" id="toolsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
