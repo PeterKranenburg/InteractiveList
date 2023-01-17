@@ -21,7 +21,7 @@ var zorgToolData = [
   "Toolnaam": "Persoonsalarmering",
   "Toolbeschrijving": "Wat is personenalarmering? Personenalarmering is een&nbsp;veiligheidssysteem. Het bestaat uit een draadloze zender en een alarmapparaat. De zender draagt u om uw hals of pols. Zo heeft u deze altijd bij de hand. De zender heeft een bereik van ongeveer 30 meter. Hij hoeft niet te worden opgeladen.",
   "Toolimg": "https:\/\/hulpmiddelenwijzer.nl\/getmedia\/e400c8f6-27a4-4353-9731-cba1bc13ea15\/HM0354-persoonsalarmering-binnenshuis.jpg.aspx?width=226&amp;height=226&amp;ext=.jpg?width=100&amp;height=100",
-  "Toollink": "http:\/\/www.onbezorgdthuiswonen.nl\/wat-is-personenalarmering - :~:text=Wat%20is%20personenalarmering%3F%20Personenalarmering%20is%20een%20veiligheidssysteem.%20Het,30%20meter.%20Hij%20hoeft%20niet%20te%20worden%20opgeladen."
+  "Toollink": "http:\/\/www.onbezorgdthuiswonen.nl\/wat-is-personenalarmering - :~:text=Wat%20is%20personenalarmering%3F%20Personenalarmering%20is%20een%20veiligheidssysteem.%20Het30%20meter.%20Hij%20hoeft%20niet%20te%20worden%20opgeladen."
  },
  {
   "Toolnaam": "Medido",
@@ -63,9 +63,6 @@ var zorgToolData = [
   "Toolnaam": "smart glasses",
   "Toolbeschrijving": "Met de Smart Glass kan de zorgmedewerker door middel van een camera direct contact leggen met een verpleegkundige of arts. De verpleegkundige of arts kan meteen door de ogen van de medewerker meekijken en ondersteuning bieden. Deskundigheid zónder afstand. De voordelen voor de cliënt: specialistische zorg is snel en dichtbij geregeld. Afstand en reistijd is geen bezwaar. De cliënt is omringd door vertrouwde gezichten en de cliënt kan meepraten en vragen stellen aan de deskundige.&nbsp;",
   "Toolimg": "https:\/\/1minuut.com\/wp-content\/uploads\/2021\/05\/Mandy-Broeren-ZGEM-e1620743016262-768x279.png",
-  "Toollink": "https:\/\/1minuut.com\/"
- },
- {
-  "Toollink": "https:\/\/www.youtube.com\/watch?v=XLP4YTpUpBI"
+  "Toollink": "https:\/\/1minuut.com\/,"
  }
 ]
