@@ -137,15 +137,12 @@ function resetDivPos(descDiv, i, ev) {
 }
 
 function createContentDivs(i) {
-    var AimgLink = document.createElement('a')
     var imgElement = document.createElement('img')
-    AimgLink.href = zorgToolData[i].Toollink
     imgElement.className = "toolImg"
     imgElement.alt = "No img found"
     imgElement.src = zorgToolData[i].Toolimg ?  zorgToolData[i].Toolimg : ""
 
     var galleryDiv = document.getElementById("gallery" + i)
-    galleryDiv.appendChild(AimgLink)
     galleryDiv.appendChild(imgElement)
 
     var descTitleDiv = document.createElement('div')
